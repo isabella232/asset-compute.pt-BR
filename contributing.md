@@ -1,9 +1,9 @@
 ---
-source-git-commit: 324f414164ccbb712e7197ddc68075ea9c238cae
+source-git-commit: 79630efa8cee2c8919d11e9bb3c14ee4ef54d0f3
 workflow-type: tm+mt
 translation-type: tm+mt
-source-wordcount: '519'
-ht-degree: 4%
+source-wordcount: '518'
+ht-degree: 2%
 
 ---
 # Contribuir para a documentação
@@ -59,4 +59,4 @@ Se você for um funcionário de Adobe e tiver uma contribuição, use a `AdobeDo
 
 ## Informações adicionais
 
-Consulte o Guia [do colaborador do](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html) Adobe Docs para obter mais detalhes sobre como usar a plataforma de criação do GitHub e a sintaxe Markdown suportada.
+Consulte o Guia [do colaborador do](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html) Adobe Docs para obter mais detalhes sobre como usar a plataforma de criação do GitHub e a sintaxe Markdown suportada.
