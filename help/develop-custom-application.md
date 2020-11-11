@@ -2,9 +2,9 @@
 title: Desenvolver para [!DNL Asset Compute Service].
 description: Crie aplicativos personalizados usando [!DNL Asset Compute Service].
 translation-type: tm+mt
-source-git-commit: 127895cf1bab59546f9ba0be2b3b7a935627effb
+source-git-commit: 6de4e3cde9c38f2e23838f5d728dae23e15d2147
 workflow-type: tm+mt
-source-wordcount: '1496'
+source-wordcount: '1559'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,7 @@ Verifique se a CLI [de E/S do](https://github.com/adobe/aio-cli) Adobe está ins
 
    Leia aqui sobre os componentes [principais de um aplicativo](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#5-anatomy-of-a-project-firefly-application)Firefly.
 
-   O aplicativo modelo aproveita nosso SDK [de Computação de](https://github.com/adobe/asset-compute-sdk#asset-compute-sdk) ativos para fazer upload, download e orquestração de execuções de aplicativos, de modo que os desenvolvedores precisam apenas implementar a lógica personalizada do aplicativo. Dentro da `actions/<worker-name>` pasta, o `index.js` arquivo é onde adicionar o código do aplicativo personalizado.
+   O aplicativo modelo aproveita nosso SDK [do](https://github.com/adobe/asset-compute-sdk#asset-compute-sdk) Asset compute para fazer upload, download e orquestração de execuções do aplicativo, de modo que os desenvolvedores precisam apenas implementar a lógica do aplicativo personalizado. Dentro da `actions/<worker-name>` pasta, o `index.js` arquivo é onde adicionar o código do aplicativo personalizado.
 
 Consulte [exemplos de aplicativos](#try-sample) personalizados para obter exemplos e ideias para aplicativos personalizados.
 
@@ -82,7 +82,7 @@ A ferramenta para desenvolvedores usada para testar aplicativos personalizados c
 
 >[!NOTE]
 >
->Isso é separado do armazenamento de nuvem [!DNL Adobe Experience Manager] como um Cloud Service. Ela se aplica somente ao desenvolvimento e teste com a ferramenta para desenvolvedores Asset Compute.
+>Isso é separado do armazenamento de nuvem [!DNL Adobe Experience Manager] como um Cloud Service. Ela se aplica somente ao desenvolvimento e teste com a ferramenta para desenvolvedores de Asset computes.
 
 Certifique-se de ter acesso a um container [de armazenamento em nuvem](https://github.com/adobe/asset-compute-devtool#prerequisites)suportado. Este container pode ser compartilhado por vários desenvolvedores em diferentes projetos, conforme necessário.
 
@@ -96,7 +96,13 @@ Adicione as seguintes credenciais para a ferramenta de desenvolvedor ao arquivo 
    ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH=
    ```
 
-1. Adicione credenciais de Armazenamento S3 ou Azure. Você só precisa acessar uma solução de armazenamento em nuvem.
+1. Se o aplicativo não `console.json` estiver na raiz diretamente do aplicativo Firefly, adicione o caminho absoluto ao arquivo JSON de integração do Console do desenvolvedor do Adobe. Esse é o mesmo [`console.json`](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user) arquivo baixado na área de trabalho do projeto. Como alternativa, você também pode usar o comando `aio app use <path_to_console_json>` em vez de adicionar o caminho ao arquivo ENV.
+
+   ```conf
+   ASSET_COMPUTE_INTEGRATION_FILE_PATH=
+   ```
+
+1. Adicione credenciais de armazenamento S3 ou Azure. Você só precisa acessar uma solução de armazenamento em nuvem.
 
    ```conf
    # S3 credentials
@@ -113,7 +119,7 @@ Adicione as seguintes credenciais para a ferramenta de desenvolvedor ao arquivo 
 
 ## Executar o aplicativo {#run-custom-application}
 
-Antes de executar o aplicativo com a ferramenta para desenvolvedores Asset Compute, configure as [credenciais](#developer-tool-credentials)corretamente.
+Antes de executar o aplicativo com a ferramenta para desenvolvedores de Asset computes, configure as [credenciais](#developer-tool-credentials)corretamente.
 
 Para executar o aplicativo na ferramenta para desenvolvedor, use `aio app run` o comando. Ele implanta a ação na Adobe I/O Runtime e start a ferramenta de desenvolvimento na máquina local. Essa ferramenta é usada para testar solicitações de aplicativos durante o desenvolvimento. Veja um exemplo de solicitação de representação:
 
@@ -128,7 +134,7 @@ Para executar o aplicativo na ferramenta para desenvolvedor, use `aio app run` o
 
 >[!NOTE]
 >
->Não use o sinalizador `--local` com o `run` comando. Ele não funciona com aplicativos [!DNL Asset Compute] personalizados e com a ferramenta Asset Compute Developer. Os aplicativos personalizados são chamados pelo [!DNL Asset Compute Service] que não pode acessar ações executadas nos computadores locais do desenvolvedor.
+>Não use o sinalizador `--local` com o `run` comando. Ele não funciona com aplicativos [!DNL Asset Compute] personalizados e com a ferramenta para desenvolvedores de Asset computes. Os aplicativos personalizados são chamados pelo [!DNL Asset Compute Service] que não pode acessar ações executadas nos computadores locais do desenvolvedor.
 
 Consulte [aqui](test-custom-application.md) como testar e depurar seu aplicativo. Quando terminar de desenvolver seu aplicativo personalizado, [implante seu aplicativo](deploy-custom-application.md)personalizado.
 
@@ -208,7 +214,7 @@ O `example-worker-animal-pictures` envia um parâmetro personalizado [`animal`](
 
 ## Suporte de autenticação e autorização {#authentication-authorization-support}
 
-Por padrão, os aplicativos personalizados do Asset Compute vêm com verificações de autorização e autenticação para aplicativos Firefly. Isso é ativado ao configurar a `require-adobe-auth` anotação como `true` no `manifest.yml`.
+Por padrão, os aplicativos personalizados do Asset compute vêm com verificações de autorização e autenticação para aplicativos Firefly. Isso é ativado ao configurar a `require-adobe-auth` anotação como `true` no `manifest.yml`.
 
 ### Acessar outras APIs de Adobe {#access-adobe-apis}
 
@@ -272,14 +278,14 @@ Um aplicativo é executado em um container no Adobe I/O Runtime com [limites](ht
           concurrency: 1
 ```
 
-Devido ao processamento mais extenso normalmente feito pelos aplicativos de Computação de ativos, é mais provável que seja necessário ajustar esses limites para obter desempenho ideal (grande o suficiente para lidar com ativos binários) e eficiência (não desperdiçar recursos devido à memória não utilizada do container).
+Devido ao processamento mais extenso normalmente feito pelos aplicativos de Asset compute, é mais provável que seja necessário ajustar esses limites para o desempenho ideal (grande o suficiente para lidar com ativos binários) e eficiência (não desperdiçar recursos devido à memória não utilizada do container).
 
 O tempo limite padrão para ações em Tempo de execução é de um minuto, mas pode ser aumentado pela definição do `timeout` limite (em milissegundos). Se você espera processar arquivos maiores, aumente esse tempo. Considere o tempo total necessário para baixar a fonte, processar o arquivo e fazer upload da execução. Se uma ação expirar, ou seja, não retornar a ativação antes do limite de tempo limite especificado, o Tempo de execução descartará o container e não o reutilizará.
 
-Os aplicativos de computação de ativos, por natureza, tendem a ser conectados à rede e E/S de disco. O arquivo de origem deve ser baixado primeiro, o processamento é frequentemente de E/S pesada e as execuções resultantes são carregadas novamente.
+Os aplicativos de asset compute, por natureza, tendem a estar conectados à rede e à E/S do disco. O arquivo de origem deve ser baixado primeiro, o processamento é frequentemente de E/S pesada e as execuções resultantes são carregadas novamente.
 
 A memória disponível para um container de ação é especificada por `memorySize` em MB. Atualmente, isso também define a quantidade de acesso da CPU que o container recebe, e mais importante, é um elemento chave do custo de uso do Tempo de execução (container maiores custam mais). Use um valor maior aqui quando o seu processamento exigir mais memória ou CPU, mas tenha cuidado para não desperdiçar recursos, quanto maior for o container, menor será o throughput geral.
 
-Além disso, é possível controlar a simultaneidade de ações dentro de um container usando a `concurrency` configuração. Esse é o número de ativações simultâneas que um único container recebe (da mesma ação). Neste modelo, o container de ação é como um servidor Node.js que recebe várias solicitações simultâneas, até esse limite. Se não estiver definido, o padrão em Tempo de execução é 200, o que é ótimo para ações menores do Firefly, mas geralmente muito grande para aplicativos do Asset Compute, devido ao processamento local mais intenso e à atividade do disco. Alguns aplicativos, dependendo de sua implementação, também podem não funcionar bem com atividades simultâneas. O SDK do Asset Compute garante que as ativações sejam separadas gravando arquivos em diferentes pastas exclusivas.
+Além disso, é possível controlar a simultaneidade de ações dentro de um container usando a `concurrency` configuração. Esse é o número de ativações simultâneas que um único container recebe (da mesma ação). Neste modelo, o container de ação é como um servidor Node.js que recebe várias solicitações simultâneas, até esse limite. Se não estiver definido, o padrão em Tempo de execução é 200, o que é ótimo para ações menores do Firefly, mas geralmente muito grande para aplicativos Asset computes, devido ao processamento local mais intensivo e à atividade de disco. Alguns aplicativos, dependendo de sua implementação, também podem não funcionar bem com atividades simultâneas. O SDK do Asset compute garante que as ativações sejam separadas gravando arquivos em pastas exclusivas diferentes.
 
 Teste os aplicativos para encontrar os números ideais para `concurrency` e `memorySize`. Container maiores = o limite de memória mais alto pode permitir mais simultaneidade, mas também pode ser um desperdício para tráfego mais baixo.
