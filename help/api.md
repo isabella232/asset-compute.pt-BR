@@ -2,9 +2,9 @@
 title: '[!DNL Asset Compute Service] API HTTP.'
 description: '[!DNL Asset Compute Service] API HTTP para criar aplicativos personalizados.'
 translation-type: tm+mt
-source-git-commit: 18e97e544014933e9910a12bc40246daa445bf4f
+source-git-commit: 79630efa8cee2c8919d11e9bb3c14ee4ef54d0f3
 workflow-type: tm+mt
-source-wordcount: '2931'
+source-wordcount: '2925'
 ht-degree: 2%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 2%
 
 # [!DNL Asset Compute Service] API HTTP {#asset-compute-http-api}
 
-O uso da API é limitado a fins de desenvolvimento. A API é fornecida como um contexto ao desenvolver aplicativos personalizados. [!DNL Adobe Experience Manager] como Cloud Service usa a API para passar as informações de processamento para um aplicativo personalizado. Para obter mais informações, consulte [Usar microserviços de ativos e Perfis](https://docs.adobe.com/content/help/br/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html)de processamento.
+O uso da API é limitado a fins de desenvolvimento. A API é fornecida como um contexto ao desenvolver aplicativos personalizados. [!DNL Adobe Experience Manager] como Cloud Service usa a API para passar as informações de processamento para um aplicativo personalizado. Para obter mais informações, consulte [Usar microserviços de ativos e Perfis](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html)de processamento.
 
 >[!NOTE]
 >
@@ -64,7 +64,7 @@ Eles exigem que o [!DNL Adobe Developer Console] projeto seja inscrito em `Asset
 * Básico
    * scopes: `openid,AdobeID`
 
-* Computação de ativos
+* asset compute
    * metascope: `asset_compute_meta`
    * scopes: `asset_compute,read_organizations`
 
@@ -349,7 +349,7 @@ Todas as respostas JSON (se presentes) incluem o `requestId` que tem o mesmo val
 
 ## Inclusão no pós-processamento {#opt-in-to-post-processing}
 
-O [Asset Compute SDK](https://github.com/adobe/asset-compute-sdk) suporta um conjunto de opções básicas de pós-processamento de imagem. Os funcionários personalizados podem opt in-se explicitamente ao pós-processamento definindo o campo `postProcess` no objeto de representação como `true`.
+O SDK [do](https://github.com/adobe/asset-compute-sdk) Asset compute suporta um conjunto de opções básicas de pós-processamento de imagem. Os funcionários personalizados podem opt in-se explicitamente ao pós-processamento definindo o campo `postProcess` no objeto de representação como `true`.
 
 Os casos de uso suportados são:
 
@@ -362,7 +362,7 @@ Os casos de uso suportados são:
 
 ## Ativos de marca d&#39;água {#add-watermark}
 
-O [Asset Compute SDK](https://github.com/adobe/asset-compute-sdk) suporta a adição de uma marca d&#39;água aos arquivos de imagem PNG, JPEG, TIFF e GIF. A marca d&#39;água é adicionada após as instruções de representação no `watermark` objeto na representação.
+O SDK [do](https://github.com/adobe/asset-compute-sdk) Asset compute suporta a adição de uma marca d&#39;água aos arquivos de imagem PNG, JPEG, TIFF e GIF. A marca d&#39;água é adicionada após as instruções de representação no `watermark` objeto na representação.
 
 A marca d&#39;água é feita durante o pós-processamento da representação. Para marcar os ativos com marca d&#39;água, o trabalhador personalizado [opta por pós-processamento](#opt-in-to-post-processing) definindo o campo `postProcess` no objeto de representação como `true`. Se o trabalhador não aceitar, a marca d&#39;água não será aplicada, mesmo se o objeto de marca d&#39;água estiver definido no objeto de representação na solicitação.
 
@@ -374,7 +374,7 @@ Estas são as opções disponíveis para o `renditions` array no [/processo](#pr
 
 | Nome | Tipo | Descrição | Exemplo |
 |-------------------|----------|-------------|---------|
-| `fmt` | `string` | O formato de público alvo de execuções também pode ser `text` para extração de texto e `xmp` para extrair metadados XMP como xml. Consulte formatos [suportados](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/file-format-support.html) | `png` |
+| `fmt` | `string` | O formato de público alvo de execuções também pode ser `text` para extração de texto e `xmp` para extrair metadados XMP como xml. Consulte formatos [suportados](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html) | `png` |
 | `worker` | `string` | URL de um aplicativo [](develop-custom-application.md)personalizado. Deve ser um `https://` URL. Se esse campo estiver presente, a execução será criada por um aplicativo personalizado. Qualquer outro campo de representação definido é usado no aplicativo personalizado. | `"https://1234.adobeioruntime.net`<br>`/api/v1/web`<br>`/example-custom-worker-master/worker"` |
 | `target` | `string` | URL para o qual a representação gerada deve ser carregada usando o PUT HTTP. | `http://w.com/img.jpg` |
 | `target` | `object` | Multipeça informações de upload de URL pré-assinado para a execução gerada. Isso é para [AEM/Oak Direct Binary Upload](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html) com este comportamento [de upload de](http://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/api/binary/BinaryUpload.html)várias partes.<br>Fields:<ul><li>`urls`: matriz de strings, uma para cada URL de parte pré-assinada</li><li>`minPartSize`: o tamanho mínimo a ser usado para uma parte = url</li><li>`maxPartSize`: o tamanho máximo a ser usado para uma parte = url</li></ul> | `{ "urls": [ "https://part1...", "https://part2..." ], "minPartSize": 10000, "maxPartSize": 100000 }` |
@@ -382,7 +382,7 @@ Estas são as opções disponíveis para o `renditions` array no [/processo](#pr
 
 ### Campos específicos de representação {#rendition-specific-fields}
 
-Para obter uma lista dos formatos de arquivo suportados atualmente, consulte os formatos [de arquivo](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/file-format-support.html)suportados.
+Para obter uma lista dos formatos de arquivo suportados atualmente, consulte os formatos [de arquivo](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html)suportados.
 
 | Nome | Tipo | Descrição | Exemplo |
 |-------------------|----------|-------------|---------|
