@@ -12,24 +12,24 @@ ht-degree: 1%
 
 # Solução de problemas {#troubleshoot}
 
-Algumas dicas genéricas de solução de problemas que podem ajudá-lo a solucionar problemas com o Asset Compute Service são:
+Algumas dicas genéricas de solução de problemas que podem ajudá-lo a solucionar problemas com o Serviço de Asset compute são:
 
 * Certifique-se de que o aplicativo JavaScript não trave na inicialização. Tais falhas normalmente estão relacionadas a uma biblioteca ausente ou a uma dependência.
-* Certifique-se de que todas as dependências a serem instaladas sejam referenciadas no `package.json` arquivo do aplicativo.
+* Verifique se todas as dependências a serem instaladas são referenciadas no arquivo `package.json` do aplicativo.
 * Certifique-se de que todos os erros que possam vir da limpeza na falha não gerem seus próprios erros que ocultam o problema original.
 
-* Ao iniciar a ferramenta para desenvolvedores pela primeira vez com uma nova [!DNL Asset Compute Service] integração, ela pode falhar na primeira solicitação de processamento porque o Journal Eventos Asset Compute pode não estar completamente configurado. Aguarde até que o journal seja configurado antes de enviar outra solicitação.
-* Se você encontrar erros ao enviar a Computação de ativos `/register` ou `/process` solicitações, certifique-se de que todas as APIs necessárias foram adicionadas ao Projeto de E/S do Adobe e à Área de trabalho, ou seja, Computação de ativos, Eventos de E/S, Gerenciamento de Eventos de E/S e Tempo de execução.
+* Ao iniciar a ferramenta do desenvolvedor pela primeira vez com uma nova integração [!DNL Asset Compute Service], ela pode falhar na primeira solicitação de processamento porque o Journal de Eventos do Asset compute pode não estar completamente configurado. Aguarde até que o journal seja configurado antes de enviar outra solicitação.
+* Se você encontrar erros ao enviar solicitações de Adobe I/O `/register` ou `/process`, verifique se todas as APIs necessárias foram adicionadas ao Asset compute Project e Workspace, ou seja, Asset compute, Eventos de E/S, Gerenciamento de Eventos de E/S e Tempo de execução.
 
-## Problemas de login por meio da CLI de E/S do Adobe {#login-via-aio-cli}
+## Problemas de logon via Adobe I/O CLI {#login-via-aio-cli}
 
-Se tiver problemas ao fazer logon [!DNL Adobe Developer Console] pela CLI [](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#3-signing-in-from-cli)de E/S do Adobe, adicione manualmente as credenciais necessárias para desenvolver, testar e implantar seu aplicativo personalizado:
+Se você tiver problemas ao fazer logon no [!DNL Adobe Developer Console] [por meio do Adobe I/O CLI](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#3-signing-in-from-cli), adicione manualmente as credenciais necessárias para desenvolver, testar e implantar seu aplicativo personalizado:
 
-1. Navegue até o projeto e o espaço de trabalho do Firefly no [Adobe Developer Console](https://console.adobe.io/) e pressione **[!UICONTROL Download]** no canto superior direito. Abra este arquivo e salve este JSON em um local seguro na sua máquina.
+1. Navegue até o projeto e o espaço de trabalho do Firefly no [Console do desenvolvedor do Adobe](https://console.adobe.io/) e pressione **[!UICONTROL Download]** no canto superior direito. Abra este arquivo e salve este JSON em um local seguro na sua máquina.
 
 1. Navegue até o arquivo ENV em seu aplicativo Firefly.
 
-1. Adicione as credenciais do Adobe I/O Runtime. Obtenha as credenciais do Adobe I/O Runtime do JSON baixado. As credenciais estão embaixo `project.workspace.services.runtime`. Adicione as credenciais de I/O Runtime nas `AIO_runtime_XXX` variáveis:
+1. Adicione as credenciais do Adobe I/O Runtime. Obtenha as credenciais do Adobe I/O Runtime do JSON baixado. As credenciais estão em `project.workspace.services.runtime`. Adicione as credenciais de I/O Runtime nas variáveis `AIO_runtime_XXX`:
 
    ```json
    AIO_runtime_auth=
@@ -42,7 +42,7 @@ Se tiver problemas ao fazer logon [!DNL Adobe Developer Console] pela CLI [](htt
        ASSET_COMPUTE_INTEGRATION_FILE_PATH=
    ```
 
-1. Configure o restante das credenciais [](develop-custom-application.md) necessárias para a ferramenta de desenvolvedor.
+1. Configure o restante das [credenciais necessárias](develop-custom-application.md) necessárias para a ferramenta do desenvolvedor.
 
 <!-- TBD for later:
 Add any best practices for developers in this section:
