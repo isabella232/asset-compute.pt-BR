@@ -2,9 +2,9 @@
 title: Desenvolver para [!DNL Asset Compute Service].
 description: Crie aplicativos personalizados usando [!DNL Asset Compute Service].
 translation-type: tm+mt
-source-git-commit: 6de4e3cde9c38f2e23838f5d728dae23e15d2147
+source-git-commit: c392b8588929f7b13db13e42a3f17bbc4f68a376
 workflow-type: tm+mt
-source-wordcount: '1559'
+source-wordcount: '1557'
 ht-degree: 0%
 
 ---
@@ -82,7 +82,7 @@ A ferramenta para desenvolvedores usada para testar aplicativos personalizados c
 
 >[!NOTE]
 >
->Isso é separado do armazenamento de nuvem de [!DNL Adobe Experience Manager] como um Cloud Service. Ela se aplica somente ao desenvolvimento e teste com a ferramenta para desenvolvedores de Asset computes.
+>Isso é separado do armazenamento de nuvem de [!DNL Adobe Experience Manager] como um [!DNL Cloud Service]. Ela se aplica somente ao desenvolvimento e teste com a ferramenta para desenvolvedores de Asset computes.
 
 Certifique-se de ter acesso a um container de armazenamento de nuvem [suportado](https://github.com/adobe/asset-compute-devtool#prerequisites). Este container pode ser compartilhado por vários desenvolvedores em diferentes projetos, conforme necessário.
 
