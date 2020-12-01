@@ -5,7 +5,7 @@ solution: Experience Manager
 type: Documentation
 audience: end-user
 user-guide-title: Guia de serviço do asset compute
-user-guide-description: Essa documentação [!DNL Asset Compute Service] abrange tarefas como desenvolver, gerenciar, implantar e solucionar problemas do código personalizado.
+user-guide-description: Esta documentação aborda tarefas [!DNL Asset Compute Service] como desenvolver, gerenciar, implantar e solucionar problemas do código personalizado.
 breadcrumb-title: Guia de serviço do asset compute
 breadcrumb-url: /docs/asset-compute/using/home.html
 solution-title: Ativos AEM
@@ -22,7 +22,7 @@ ht-degree: 12%
 ---
 
 
-# Guia do usuário do serviço de asset compute {#using}
+# Guia do usuário do Asset compute Service {#using}
 
 + [Guia do usuário do Serviço de asset compute](home.md)
 + [Visão geral](introduction.md)
@@ -30,7 +30,7 @@ ht-degree: 12%
 + [Formatos de arquivo não suportados](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html)
 + [Arquitetura](architecture.md)
 + [Referências da API](api.md)
-+ Estender serviço de Asset compute {#extend}
++ Estender o serviço de Asset compute {#extend}
    + [Sobre a extensão do Serviço de Computação](understand-extensibility.md)
    + [Configurar o ambiente](setup-environment.md)
    + [Compreender os conceitos internos de um aplicativo](custom-application-internals.md)
