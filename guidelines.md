@@ -1,8 +1,8 @@
 ---
-source-git-commit: 0a0feacbcd6456e01a6d451f9954ab21c1a8bce3
+source-git-commit: 78c1246f5fc42006013701a6cf4d375a1d8c9fd8
 workflow-type: tm+mt
 translation-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '646'
 ht-degree: 5%
 
 ---
@@ -30,9 +30,9 @@ As exceções a essa regra são notas de versão nas quais os problemas conhecid
 
 ### As contribuições de documentação não são para responder a query do cliente
 
-Quaisquer ideias que você precise melhorar a documentação são bem-vindas como contribuições. No entanto, comentários, problemas e solicitações de baixa automática são destinados apenas a *contribuições* . Eles não devem ser usados para responder suas perguntas sobre como usar o produto, implementar projetos ou resolver problemas técnicos.
+Quaisquer ideias que você precise melhorar a documentação são bem-vindas como contribuições. No entanto, comentários, problemas e solicitações pull destinam-se apenas a *contribuições*. Eles não devem ser usados para responder suas perguntas sobre como usar o produto, implementar projetos ou resolver problemas técnicos.
 
-Quaisquer dúvidas sobre o uso ou os erros técnicos que você possa ter devem ser relatados por meio do processo de suporte normal pelo portal [de suporte empresarial do](https://helpx.adobe.com/br/contact/enterprise-support.ec.html) Experience Cloud ou discutidos na comunidade [do](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community)Experience Manager.
+Quaisquer dúvidas sobre o uso ou os erros técnicos que você possa ter devem ser relatadas por meio do processo de suporte normal pelo [[!DNL Experience Cloud] Portal de suporte empresarial](https://helpx.adobe.com/br/contact/enterprise-support.ec.html) ou discutidas na [[!DNL Experience Manager] comunidade](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community).
 
 As contribuições para a documentação não são uma substituição do Atendimento ao cliente do Adobe*** e qualquer contribuição que buscar respostas para as perguntas relacionadas ao suporte será rejeitada.
 
@@ -60,7 +60,7 @@ Lembre-se de que os leitores da documentação são espalhados pelo mundo inteir
 
 #### Siga o Manual de estilo da Microsoft
 
-[O Manual de estilo](https://docs.microsoft.com/en-us/style-guide/welcome/) da Microsoft é um guia de estilo de documentação disponível gratuitamente, que foca na documentação do software.
+[O Manual de ](https://docs.microsoft.com/en-us/style-guide/welcome/) estilo da Microsoft é um guia de estilo de documentação disponível gratuitamente, que foca na documentação do software.
 
 ### Formatação
 
