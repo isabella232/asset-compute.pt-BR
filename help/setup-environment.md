@@ -2,9 +2,9 @@
 title: Defina o ambiente de desenvolvimento necessário para [!DNL Asset Compute Service].
 description: Configuração do ambiente do desenvolvedor para [!DNL Asset Compute Service] para criar e testar o código personalizado do start.
 translation-type: tm+mt
-source-git-commit: c392b8588929f7b13db13e42a3f17bbc4f68a376
+source-git-commit: 0ecf2c044c7847029fb10ce37f4b831c58b93fe9
 workflow-type: tm+mt
-source-wordcount: '374'
+source-wordcount: '373'
 ht-degree: 3%
 
 ---
@@ -32,7 +32,7 @@ Para criar uma configuração que permita desenvolver para [!DNL Asset Compute S
 
 1. Receba acesso de Administrador do sistema ou Função do desenvolvedor na Organização da experiência. Isso pode ser definido por um Administrador do sistema em [Admin Console](https://adminconsole.adobe.com/overview).
 
-1. Faça logon no [Console do desenvolvedor do Adobe](https://console.adobe.io/). Certifique-se de fazer parte da mesma Organização Adobe Experience Cloud que a AEM como uma integração [!DNL Cloud Service]. Para obter mais informações sobre o Console do desenvolvedor do Adobe, consulte [Documentação do console](https://www.adobe.io/apis/experienceplatform/console/docs.html).
+1. Faça logon no [Console do desenvolvedor do Adobe](https://console.adobe.io/). Certifique-se de fazer parte da mesma Organização Adobe Experience Cloud que [!DNL Experience Manager] como uma integração [!DNL Cloud Service]. Para obter mais informações sobre o Console do desenvolvedor do Adobe, consulte [Documentação do console](https://www.adobe.io/apis/experienceplatform/console/docs.html).
 
 1. [Criar um projeto](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html#!AdobeDocs/project-firefly/master/getting_started/first_app.md) Firefly. Clique em **[!UICONTROL Criar novo projeto]** > **[!UICONTROL Projeto do modelo]**. Selecione Firefly. Ele cria um novo projeto Firefly com dois espaços de trabalho: `Production` e `Stage`. Adicione espaços de trabalho adicionais, por exemplo `Development`, conforme necessário.
 
