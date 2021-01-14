@@ -2,9 +2,9 @@
 title: Desenvolver para [!DNL Asset Compute Service].
 description: Crie aplicativos personalizados usando [!DNL Asset Compute Service].
 translation-type: tm+mt
-source-git-commit: c392b8588929f7b13db13e42a3f17bbc4f68a376
+source-git-commit: 576936cc7527fc4cb43c0859a61df5fecc0bc3a8
 workflow-type: tm+mt
-source-wordcount: '1557'
+source-wordcount: '1569'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Certifique-se de ter o [Adobe I/O CLI](https://github.com/adobe/aio-cli) instala
    create console.json
    ```
 
-1. Quando solicitado com `Which Adobe I/O App features do you want to enable for this project?`, selecione pelo menos `Actions`:
+1. Quando solicitado com `Which Adobe I/O App features do you want to enable for this project?`, selecione `Actions`. Certifique-se de desmarcar a opção `Web Assets`, pois os ativos da Web usam verificações de autenticação e autorização diferentes.
 
    ```bash
    ? Which Adobe I/O App features do you want to enable for this project?
@@ -282,7 +282,7 @@ Devido ao processamento mais extenso normalmente feito pelos aplicativos de Asse
 
 O tempo limite padrão para ações em Tempo de execução é de um minuto, mas pode ser aumentado ao configurar o limite `timeout` (em milissegundos). Se você espera processar arquivos maiores, aumente esse tempo. Considere o tempo total necessário para baixar a fonte, processar o arquivo e fazer upload da execução. Se uma ação expirar, ou seja, não retornar a ativação antes do limite de tempo limite especificado, o Tempo de execução descartará o container e não o reutilizará.
 
-Os aplicativos de asset compute, por natureza, tendem a estar conectados à rede e à E/S do disco. O arquivo de origem deve ser baixado primeiro, o processamento é frequentemente de E/S pesada e as execuções resultantes são carregadas novamente.
+Os aplicativos de asset compute, por natureza, tendem a ser conectados à rede e à E/S de disco. O arquivo de origem deve ser baixado primeiro, o processamento é frequentemente de E/S pesada e as execuções resultantes são carregadas novamente.
 
 A memória disponível para um container de ação é especificada por `memorySize` em MB. Atualmente, isso também define a quantidade de acesso da CPU que o container recebe, e mais importante, é um elemento chave do custo de uso do Tempo de execução (container maiores custam mais). Use um valor maior aqui quando o seu processamento exigir mais memória ou CPU, mas tenha cuidado para não desperdiçar recursos, quanto maior for o container, menor será o throughput geral.
 
