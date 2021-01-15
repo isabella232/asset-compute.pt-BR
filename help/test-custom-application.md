@@ -2,9 +2,9 @@
 title: Testar e depurar [!DNL Asset Compute Service] aplicativo personalizado.
 description: Testar e depurar [!DNL Asset Compute Service] aplicativo personalizado.
 translation-type: tm+mt
-source-git-commit: 54afa44d8d662ee1499a385f504fca073ab6c347
+source-git-commit: 7e520921ebb459c963d61d70c66497b8e62521cf
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '787'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ A estrutura de teste da unidade de aplicação do Asset compute permite testar a
 
 ### Adicionar testes {#add-tests}
 
-Os testes são esperados dentro da pasta `test` no nível raiz do projeto AIO. Os casos de teste para cada aplicativo devem estar no caminho `test/asset-compute/<worker-name>`, com uma pasta para cada caso de teste:
+Os testes são esperados dentro da pasta `test` no nível raiz do projeto [!DNL Adobe I/O]. Os casos de teste para cada aplicativo devem estar no caminho `test/asset-compute/<worker-name>`, com uma pasta para cada caso de teste:
 
 ```yaml
 action/
