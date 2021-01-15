@@ -2,9 +2,9 @@
 title: '[!DNL Adobe Asset Compute Service] Guia do usuário.'
 description: Esta documentação aborda tarefas [!DNL Asset Compute Service] como introdução, como desenvolver, gerenciar, implantar e solucionar problemas do código personalizado.
 translation-type: tm+mt
-source-git-commit: 78c1246f5fc42006013701a6cf4d375a1d8c9fd8
+source-git-commit: d26ae470507e187249a472ececf5f08d803a636c
 workflow-type: tm+mt
-source-wordcount: '190'
+source-wordcount: '187'
 ht-degree: 4%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 4%
 
 # Sobre [!DNL Asset Compute Service]
 
-[!DNL Asset Compute Service] é um serviço escalonável e extensível da Adobe Experience Cloud para processar ativos digitais. Ele pode transformar imagens, vídeos, documentos e outros formatos de arquivo em diferentes representações, incluindo miniaturas, texto e metadados extraídos, arquivos e muito mais. Os desenvolvedores podem plugar aplicativos personalizados (também chamados de funcionários personalizados) para lidar com casos de uso personalizados, criados usando [Project Firefly](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html) e executados no servidor sem servidor [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime.html).
+[!DNL Asset Compute Service] é um serviço escalonável e extensível da Adobe Experience Cloud para processar ativos digitais. Ele pode transformar imagens, vídeos, documentos e outros formatos de arquivo em diferentes representações, incluindo miniaturas, texto e metadados extraídos, arquivos e muito mais. Os desenvolvedores podem plugar aplicativos personalizados (também chamados de funcionários personalizados) para lidar com casos de uso personalizados, criados usando [Project Firefly](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html) e executados em [[!DNL Adobe I/O] Runtime](https://www.adobe.io/apis/experienceplatform/runtime.html) sem servidor.
 
 Esta documentação aborda [!DNL Asset Compute Service] tópicos, como desenvolver, gerenciar, implantar e solucionar problemas do código personalizado. Para saber qual é a oferta [!DNL Asset Compute Service], consulte esta [introdução](introduction.md). Verifique [o que o serviço pode fazer por você](introduction.md#possible-use-cases-benefits).
 
