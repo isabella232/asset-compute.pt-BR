@@ -2,9 +2,9 @@
 title: Desenvolver para [!DNL Asset Compute Service].
 description: Crie aplicativos personalizados usando [!DNL Asset Compute Service].
 translation-type: tm+mt
-source-git-commit: d26ae470507e187249a472ececf5f08d803a636c
+source-git-commit: 7e520921ebb459c963d61d70c66497b8e62521cf
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1562'
 ht-degree: 0%
 
 ---
@@ -282,7 +282,7 @@ Devido ao processamento mais extenso normalmente feito pelos aplicativos de Asse
 
 O tempo limite padrão para ações em Tempo de execução é de um minuto, mas pode ser aumentado ao configurar o limite `timeout` (em milissegundos). Se você espera processar arquivos maiores, aumente esse tempo. Considere o tempo total necessário para baixar a fonte, processar o arquivo e fazer upload da execução. Se uma ação expirar, ou seja, não retornar a ativação antes do limite de tempo limite especificado, o Tempo de execução descartará o container e não o reutilizará.
 
-Os aplicativos de asset compute, por natureza, tendem a ser conectados à rede e à E/S de disco. O arquivo de origem deve ser baixado primeiro, o processamento é frequentemente de E/S pesada e as execuções resultantes são carregadas novamente.
+Por natureza, os aplicativos de asset compute tendem a ser ligados à rede e ao disco Input ou à saída. O arquivo de origem deve ser baixado primeiro, o processamento geralmente exige muitos recursos e as renderizações resultantes são carregadas novamente.
 
 A memória disponível para um container de ação é especificada por `memorySize` em MB. Atualmente, isso também define a quantidade de acesso da CPU que o container recebe, e mais importante, é um elemento chave do custo de uso do Tempo de execução (container maiores custam mais). Use um valor maior aqui quando o seu processamento exigir mais memória ou CPU, mas tenha cuidado para não desperdiçar recursos, quanto maior for o container, menor será o throughput geral.
 
