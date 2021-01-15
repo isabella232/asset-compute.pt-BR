@@ -2,7 +2,7 @@
 title: Introdução ao  [!DNL Asset Compute Service].
 description: '[!DNL Asset Compute Service] é um serviço de processamento de ativos nativo na nuvem que reduz a complexidade e melhora a escalabilidade.'
 translation-type: tm+mt
-source-git-commit: 78c1246f5fc42006013701a6cf4d375a1d8c9fd8
+source-git-commit: d26ae470507e187249a472ececf5f08d803a636c
 workflow-type: tm+mt
 source-wordcount: '314'
 ht-degree: 0%
@@ -39,7 +39,7 @@ Você pode usar o serviço da Web [!DNL Asset Compute] para gerar miniaturas par
 | Binary uploads or API-based asset ingestion. | Use other methods to ingest assets. |
 | Store binaries or any persisted data across processing requests.| Each request is independent so treat it as a standalone request by sharing binary and processing instructions. |
 | Store any configurations such as processing rules or settings for a user or an organization's account. | Add processing request to each request/instruction. |
-| Direct event handling of asset creation events from storage systems and processing completed notifications, and errors. | Use Adobe I/O Events and other methods. |
+| Direct event handling of asset creation events from storage systems and processing completed notifications, and errors. | Use [!DNL Adobe I/O] Events and other methods. |
 
 -->
 
