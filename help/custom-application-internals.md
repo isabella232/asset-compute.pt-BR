@@ -2,9 +2,9 @@
 title: Entenda o funcionamento de um aplicativo personalizado.
 description: Funcionamento interno do aplicativo personalizado  [!DNL Asset Compute Service] para ajudar a entender como ele funciona.
 translation-type: tm+mt
-source-git-commit: 54afa44d8d662ee1499a385f504fca073ab6c347
+source-git-commit: d26ae470507e187249a472ececf5f08d803a636c
 workflow-type: tm+mt
-source-wordcount: '774'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Use a ilustração a seguir para entender o fluxo de trabalho completo quando um
 
 ## Registro {#registration}
 
-O cliente deve chamar [`/register`](api.md#register) uma vez antes da primeira solicitação para [`/process`](api.md#process-request) a fim de configurar e recuperar o URL do journal para receber Eventos Adobe I/O para Asset compute Adobe.
+O cliente deve chamar [`/register`](api.md#register) uma vez antes da primeira solicitação para [`/process`](api.md#process-request) a fim de configurar e recuperar o URL do journal para receber Eventos [!DNL Adobe I/O] do Adobe.
 
 ```sh
 curl -X POST \
@@ -49,7 +49,7 @@ curl -X POST \
 
 O cliente é responsável por formatar corretamente as execuções com URLs pré-assinados. A biblioteca JavaScript [`@adobe/node-cloud-blobstore-wrapper`](https://github.com/adobe/node-cloud-blobstore-wrapper#presigned-urls) pode ser usada em aplicativos NodeJS para pré-assinar URLs. Atualmente, a biblioteca suporta apenas Container Blob do Azure e Armazenamentos AWS S3.
 
-A solicitação de processamento retorna um `requestId` que pode ser usado para sondar Eventos Adobe I/O.
+A solicitação de processamento retorna um `requestId` que pode ser usado para pesquisas em Eventos [!DNL Adobe I/O].
 
 Uma amostra de solicitação de processamento de aplicativo personalizado está abaixo.
 
@@ -71,7 +71,7 @@ Uma amostra de solicitação de processamento de aplicativo personalizado está 
 
 O [!DNL Asset Compute Service] envia as solicitações de execução do aplicativo personalizado para o aplicativo personalizado. Ele usa um POST HTTP para o URL do aplicativo fornecido, que é o URL de ação da Web protegido do Project Firefly. Todas as solicitações usam o protocolo HTTPS para maximizar a segurança dos dados.
 
-O [SDK do Asset compute](https://github.com/adobe/asset-compute-sdk#adobe-asset-compute-worker-sdk) usado por um aplicativo personalizado lida com a solicitação de POST HTTP. Ele também lida com o download da origem, o upload de execuções, o envio de eventos de E/S e a manipulação de erros.
+O [SDK do Asset compute](https://github.com/adobe/asset-compute-sdk#adobe-asset-compute-worker-sdk) usado por um aplicativo personalizado lida com a solicitação de POST HTTP. Ele também lida com o download da fonte, o upload de execuções, o envio de eventos [!DNL Adobe I/O] e a manipulação de erros.
 
 <!-- TBD: Add the application diagram. -->
 
@@ -115,13 +115,13 @@ Depois que cada renderização é criada e armazenada em um arquivo com o caminh
 
 O `batchWorker()` tem um comportamento diferente, já que processa todas as execuções e somente depois de todas terem sido processadas as carrega.
 
-## eventos Adobe I/O {#aio-events}
+## [!DNL Adobe I/O] Eventos {#aio-events}
 
-O SDK envia Eventos do Adobe I/O para cada execução. Esses eventos são do tipo `rendition_created` ou `rendition_failed`, dependendo do resultado. Consulte [eventos assíncronos do Asset compute](api.md#asynchronous-events) para obter detalhes sobre os eventos.
+O SDK envia Eventos [!DNL Adobe I/O] para cada execução. Esses eventos são do tipo `rendition_created` ou `rendition_failed`, dependendo do resultado. Consulte [eventos assíncronos do Asset compute](api.md#asynchronous-events) para obter detalhes sobre os eventos.
 
-## Receber Eventos Adobe I/O {#receive-aio-events}
+## Receber [!DNL Adobe I/O] Eventos {#receive-aio-events}
 
-O cliente pesquisa o Journal [Eventos Adobe I/O](https://www.adobe.io/apis/experienceplatform/events/ioeventsapi.html#/Journaling) de acordo com sua lógica de consumo. O URL do journal inicial é aquele fornecido na resposta da API `/register`. Os eventos podem ser identificados usando o `requestId` que está presente nos eventos e é o mesmo que retornado em `/process`. Cada execução tem um evento separado que é enviado assim que a execução é carregada (ou falha). Depois de receber um evento correspondente, o cliente pode exibir ou manipular as execuções resultantes.
+O cliente pesquisa o Journal [[!DNL Adobe I/O] Eventos](https://www.adobe.io/apis/experienceplatform/events/ioeventsapi.html#/Journaling) de acordo com sua lógica de consumo. O URL do journal inicial é aquele fornecido na resposta da API `/register`. Os eventos podem ser identificados usando o `requestId` que está presente nos eventos e é o mesmo que retornado em `/process`. Cada execução tem um evento separado que é enviado assim que a execução é carregada (ou falha). Depois de receber um evento correspondente, o cliente pode exibir ou manipular as execuções resultantes.
 
 A biblioteca JavaScript [`asset-compute-client`](https://github.com/adobe/asset-compute-client#usage) torna a pesquisa de journais simples usando o método `waitActivation()` para obter todos os eventos.
 
@@ -141,7 +141,7 @@ await Promise.all(events.map(event => {
 }));
 ```
 
-Para obter detalhes sobre como obter eventos de journais, consulte [API Eventos Adobe I/O](https://www.adobe.io/apis/experienceplatform/events/ioeventsapi.html#!adobedocs/adobeio-events/master/events-api-reference.yaml).
+Para obter detalhes sobre como obter eventos de journais, consulte [[!DNL Adobe I/O] API Eventos](https://www.adobe.io/apis/experienceplatform/events/ioeventsapi.html#!adobedocs/adobeio-events/master/events-api-reference.yaml).
 
 <!-- TBD:
 * Illustration of the controls/data flow.
