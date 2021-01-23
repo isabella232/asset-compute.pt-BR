@@ -1,10 +1,10 @@
 ---
-title: Entenda o funcionamento de um aplicativo personalizado.
+title: Entender o funcionamento de um aplicativo personalizado
 description: Funcionamento interno do aplicativo personalizado  [!DNL Asset Compute Service] para ajudar a entender como ele funciona.
 translation-type: tm+mt
-source-git-commit: d26ae470507e187249a472ececf5f08d803a636c
+source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '751'
 ht-degree: 0%
 
 ---
