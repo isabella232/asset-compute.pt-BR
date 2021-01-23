@@ -1,8 +1,8 @@
 ---
-title: Entenda sobre como estender [!DNL Asset Compute Service].
+title: Entenda sobre como estender [!DNL Asset Compute Service]
 description: Quando e como estender a funcionalidade [!DNL Asset Compute Service] para fazer o processamento de ativos personalizados.
 translation-type: tm+mt
-source-git-commit: d26ae470507e187249a472ececf5f08d803a636c
+source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
 workflow-type: tm+mt
 source-wordcount: '259'
 ht-degree: 1%
