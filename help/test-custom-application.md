@@ -1,8 +1,8 @@
 ---
-title: Testar e depurar [!DNL Asset Compute Service] aplicativo personalizado.
+title: Testar e depurar [!DNL Asset Compute Service] aplicativo personalizado
 description: Testar e depurar [!DNL Asset Compute Service] aplicativo personalizado.
 translation-type: tm+mt
-source-git-commit: 7e520921ebb459c963d61d70c66497b8e62521cf
+source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
 workflow-type: tm+mt
 source-wordcount: '787'
 ht-degree: 0%
