@@ -1,8 +1,8 @@
 ---
-title: Implantar  [!DNL Asset Compute Service] aplicativo personalizado.
+title: Implantar  [!DNL Asset Compute Service] aplicativo personalizado
 description: Implantar  [!DNL Asset Compute Service] aplicativo personalizado.
 translation-type: tm+mt
-source-git-commit: 78c1246f5fc42006013701a6cf4d375a1d8c9fd8
+source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
 workflow-type: tm+mt
 source-wordcount: '183'
 ht-degree: 0%
