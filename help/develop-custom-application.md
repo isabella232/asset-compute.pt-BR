@@ -2,9 +2,9 @@
 title: Desenvolver para [!DNL Asset Compute Service]
 description: Crie aplicativos personalizados usando [!DNL Asset Compute Service].
 translation-type: tm+mt
-source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
+source-git-commit: 33b72b164faeda2dd425656209790f019ccec96e
 workflow-type: tm+mt
-source-wordcount: '1562'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -96,11 +96,14 @@ Adicione as seguintes credenciais para a ferramenta de desenvolvedor ao arquivo 
    ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH=
    ```
 
-1. Se `console.json` não estiver na raiz diretamente do aplicativo Firefly, adicione o caminho absoluto ao arquivo JSON de integração do Console do desenvolvedor do Adobe. Este é o mesmo arquivo [`console.json`](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user) que é baixado na área de trabalho do projeto. Como alternativa, você também pode usar o comando `aio app use <path_to_console_json>` em vez de adicionar o caminho ao arquivo ENV.
+1. Baixe o arquivo do Console do desenvolvedor do Adobe. Vá para a raiz do projeto e clique em &quot;Baixar tudo&quot; no canto superior direito. O arquivo é baixado com `<namespace>-<workspace>.json` como o nome do arquivo. Faça uma das seguintes opções:
 
-   ```conf
-   ASSET_COMPUTE_INTEGRATION_FILE_PATH=
-   ```
+   * Renomeie o arquivo como `config.json` e mova-o para a raiz do projeto.
+   * Como opção, você pode adicionar o caminho absoluto ao arquivo JSON de integração do Console do desenvolvedor do Adobe. Este é o mesmo arquivo [`console.json`](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user) que é baixado na área de trabalho do projeto.
+
+      ```conf
+      ASSET_COMPUTE_INTEGRATION_FILE_PATH=
+      ```
 
 1. Adicione credenciais de armazenamento S3 ou Azure. Você só precisa acessar uma solução de armazenamento em nuvem.
 
@@ -116,6 +119,10 @@ Adicione as seguintes credenciais para a ferramenta de desenvolvedor ao arquivo 
    AZURE_STORAGE_KEY=
    AZURE_STORAGE_CONTAINER_NAME=
    ```
+
+>[!TIP]
+>
+>O arquivo `config.json` contém credenciais. De dentro do seu projeto, adicione o arquivo JSON ao arquivo `.gitignore` para impedir o compartilhamento. O mesmo se aplica aos arquivos .env e .aio.
 
 ## Execute o aplicativo {#run-custom-application}
 
