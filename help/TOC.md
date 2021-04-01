@@ -1,39 +1,39 @@
 ---
-cloud: experience-cloud
+cloud: Experience Cloud
 product: asset compute service
 solution: Experience Manager, Experience Manager Assets
-type: Documentation
-role: Developer
-user-guide-title: Guia de serviço do asset compute
-user-guide-description: Esta documentação aborda tarefas [!DNL Asset Compute Service] como desenvolver, gerenciar, implantar e solucionar problemas do código personalizado.
-breadcrumb-title: Guia de serviço do asset compute
+type: Documentação
+role: Desenvolvedor
+user-guide-title: Guia do serviço de asset compute
+user-guide-description: Esta documentação abrange  [!DNL Asset Compute Service] tarefas como desenvolver, gerenciar, implantar e solucionar problemas do código personalizado.
+breadcrumb-title: Guia do serviço de asset compute
 breadcrumb-url: /docs/asset-compute/using/home.html
-solution-title: Ativos AEM
+solution-title: AEM Assets
 solution-hub-url: https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/home.html
 getting-started-url: https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html
 tutorials-title: Tutoriais do AEM
 tutorials-url: https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html
 translation-type: tm+mt
-source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
+source-git-commit: 1cf682be00c984fa523963f5d4358575efffb50b
 workflow-type: tm+mt
-source-wordcount: '120'
-ht-degree: 13%
+source-wordcount: '122'
+ht-degree: 14%
 
 ---
 
 
 # Guia do usuário do Asset compute Service {#using}
 
-+ [Guia do usuário do Serviço de asset compute](home.md)
++ [Guia do usuário do Asset compute Service](home.md)
 + [Visão geral](introduction.md)
 + [Notas de versão](release-notes.md)
 + [Formatos de arquivo não suportados](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html)
 + [Arquitetura](architecture.md)
-+ [Referências da API](api.md)
-+ Estender o serviço de Asset compute {#extend}
++ [Referências de API](api.md)
++ Estender o serviço do Asset compute {#extend}
    + [Sobre a extensão do Serviço de Computação](understand-extensibility.md)
    + [Configurar o ambiente](setup-environment.md)
-   + [Compreender os conceitos internos de um aplicativo](custom-application-internals.md)
+   + [Entender os conceitos internos de um aplicativo](custom-application-internals.md)
    + [Desenvolver um aplicativo personalizado](develop-custom-application.md)
    + [Testar um aplicativo personalizado](test-custom-application.md)
    + [Implantar um aplicativo personalizado](deploy-custom-application.md)
