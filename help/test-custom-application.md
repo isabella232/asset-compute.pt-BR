@@ -2,10 +2,9 @@
 title: Testar e depurar  [!DNL Asset Compute Service] aplicativo personalizado
 description: Teste e depure [!DNL Asset Compute Service] aplicativo personalizado.
 exl-id: c2534904-0a07-465e-acea-3cb578d3bc08
-translation-type: tm+mt
-source-git-commit: 9bc1534671c81a05798f98ae556d348bc771d975
+source-git-commit: ebc0d717b3f6fc4518f4a79cd44ebe8fdcf9ec6a
 workflow-type: tm+mt
-source-wordcount: '782'
+source-wordcount: '811'
 ht-degree: 0%
 
 ---
@@ -137,6 +136,10 @@ tests/
 ### Testar erros esperados {#test-unexpected-errors}
 
 Os casos de testes de erro não devem conter um arquivo `rendition.*` esperado e devem definir o `errorReason` esperado dentro do arquivo `params.json`.
+
+>[!NOTE]
+>
+>Se um caso de teste não contiver um arquivo `rendition.*` esperado e não definir o `errorReason` esperado dentro do arquivo `params.json`, presume-se que seja um caso de erro com qualquer `errorReason`.
 
 Estrutura do caso de teste de erro:
 
