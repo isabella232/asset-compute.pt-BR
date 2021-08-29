@@ -1,14 +1,13 @@
 ---
 title: Desenvolver para [!DNL Asset Compute Service]
 description: Crie aplicativos personalizados usando [!DNL Asset Compute Service].
-translation-type: tm+mt
-source-git-commit: 7ae47fdb7ff91e1388d2037d90abe35fe5218216
+exl-id: a0c59752-564b-4bb6-9833-ab7c58a7f38e
+source-git-commit: eed9da4b20fe37a4e44ba270c197505b50cfe77f
 workflow-type: tm+mt
-source-wordcount: '1615'
+source-wordcount: '1605'
 ht-degree: 0%
 
 ---
-
 
 # Desenvolver um aplicativo personalizado {#develop}
 
@@ -22,11 +21,11 @@ Antes de começar a desenvolver um aplicativo personalizado:
 
 Certifique-se de ter a [[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) instalada localmente.
 
-1. Para criar um aplicativo personalizado, [crie um aplicativo Firefly](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#4-bootstrapping-new-app-using-the-cli). Para fazer isso, execute `aio app init <app-name>` no terminal.
+1. Para criar um aplicativo personalizado, [crie um aplicativo Firefly](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#4-bootstrapping-new-app-using-the-cli). Para fazer isso, execute `aio app init <app-name>` no terminal.
 
-   Se você ainda não tiver feito logon, este comando solicitará que você faça logon no [Adobe Developer Console](https://console.adobe.io/) com sua Adobe ID. Consulte [aqui](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#3-signing-in-from-cli) para obter mais informações sobre como fazer logon pela cli.
+   Se você ainda não tiver feito logon, este comando solicitará que você faça logon no [Adobe Developer Console](https://console.adobe.io/) com sua Adobe ID. Consulte [aqui](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#3-signing-in-from-cli) para obter mais informações sobre como fazer logon pela cli.
 
-   O Adobe recomenda fazer logon. Se tiver problemas, siga as instruções [para criar um aplicativo sem fazer logon](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user).
+   O Adobe recomenda fazer logon. Se tiver problemas, siga as instruções [para criar um aplicativo sem fazer logon](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user).
 
 1. Depois de fazer logon, siga os prompts na CLI e selecione os `Organization`, `Project` e `Workspace` para usar no aplicativo. Escolha o projeto e o espaço de trabalho criados ao [configurar seu ambiente](setup-environment.md).
 
@@ -61,7 +60,7 @@ Certifique-se de ter a [[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) 
 
 1. Siga o resto dos prompts e abra o novo aplicativo no Visual Studio Code (ou seu editor de código favorito). Ele contém o scaffolding e o código de amostra de um aplicativo personalizado.
 
-   Leia aqui sobre os [componentes principais de um aplicativo Firefly](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#5-anatomy-of-a-project-firefly-application).
+   Leia aqui sobre os [componentes principais de um aplicativo Firefly](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#5-anatomy-of-a-project-firefly-application).
 
    O aplicativo modelo aproveita nosso [Asset compute SDK](https://github.com/adobe/asset-compute-sdk#asset-compute-sdk) para fazer upload, baixar e orquestrar as execuções do aplicativo, de modo que os desenvolvedores precisam apenas implementar a lógica do aplicativo personalizado. Na pasta `actions/<worker-name>`, o arquivo `index.js` é onde o código de aplicativo personalizado deve ser adicionado.
 
@@ -99,7 +98,7 @@ Adicione as seguintes credenciais para a ferramenta de desenvolvedor ao arquivo 
 1. Baixe o arquivo do Console do desenvolvedor do Adobe. Vá para a raiz do projeto e clique em &quot;Baixar tudo&quot; no canto superior direito. O arquivo é baixado com `<namespace>-<workspace>.json` como o nome do arquivo. Faça uma das seguintes opções:
 
    * Renomeie o arquivo como `console.json` e mova-o para a raiz do seu projeto.
-   * Como opção, você pode adicionar o caminho absoluto ao arquivo JSON de integração do Console do Desenvolvedor. Este é o mesmo arquivo [`console.json`](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user) que é baixado no espaço de trabalho do projeto.
+   * Como opção, você pode adicionar o caminho absoluto ao arquivo JSON de integração do Console do Desenvolvedor. Este é o mesmo arquivo [`console.json`](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user) que é baixado no espaço de trabalho do projeto.
 
       ```conf
       ASSET_COMPUTE_INTEGRATION_FILE_PATH=
@@ -170,7 +169,7 @@ exports.main = worker(async (source, rendition) => {
 });
 ```
 
-## Chame uma API externa {#call-external-api}
+## Chamar uma API externa {#call-external-api}
 
 No código do aplicativo, você pode fazer chamadas de API externas para ajudar no processamento do aplicativo. Um exemplo de arquivo de aplicativo que chama a API externa está abaixo.
 
@@ -236,7 +235,7 @@ const clientId = params.auth.clientId; // Technical Account client Id
 const orgId = params.auth.orgId; // Experience Cloud Organization
 ```
 
-### Passe credenciais para sistemas de terceiros {#pass-credentials-for-tp}
+### Enviar credenciais para sistemas de terceiros {#pass-credentials-for-tp}
 
 Para manipular credenciais para outros serviços externos, passe-as como parâmetros padrão nas ações. Eles são automaticamente criptografados em trânsito. Para obter mais informações, consulte [criar ações no Guia do desenvolvedor do Runtime](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/guides/creating_actions.md). Em seguida, defina-os usando variáveis de ambiente durante a implantação. Esses parâmetros podem ser acessados no objeto `params` dentro da ação .
 
