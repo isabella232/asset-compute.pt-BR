@@ -2,10 +2,10 @@
 title: '[!DNL Adobe Asset Compute Service] Guia do usuário'
 description: Esta documentação abrange  [!DNL Asset Compute Service] tarefas como introdução, como desenvolver, gerenciar, implantar e solucionar problemas do código personalizado.
 exl-id: 5acf87d1-a391-4802-bfce-e367fc8564df
-source-git-commit: a2460a0719f8c585ed72e44c904aa0df33301032
+source-git-commit: daa13e422e16f5832ad3275e310bd98aa34f6c2f
 workflow-type: tm+mt
-source-wordcount: '175'
-ht-degree: 4%
+source-wordcount: '221'
+ht-degree: 3%
 
 ---
 
@@ -18,6 +18,8 @@ Esta documentação abrange [!DNL Asset Compute Service] tópicos como desenvolv
 [!DNL Asset Compute Service] O suporta a conversão de vários formatos de arquivo e integra-se com muitos serviços da Adobe. Consulte a lista de [formatos de arquivo e integração de serviços suportados](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html).
 
 Veja uma visão geral sobre [recursos de microsserviços de ativos disponíveis em [!DNL Adobe Experience Manager] as a [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html) e como usar os microsserviços em [!DNL Experience Manager].
+
+[!DNL Asset Compute Service] a extensibilidade é desenvolvida em um modelo de desenvolvimento aberto em  [github.com/](https://github.com/adobe) adobeque acolhe contribuições de desenvolvedores de extensão. Todos os componentes relevantes para desenvolver, criar, testar e implantar aplicativos personalizados são de código aberto. Consulte [como e onde contribuir para o Serviço de computação](contribute-to-compute-service.md).
 
 <!--
 Possible to record the below info here in this landing page to centralize the miscellaneous info about Asset Compute Service?
