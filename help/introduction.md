@@ -1,36 +1,35 @@
 ---
 title: Introdução ao  [!DNL Asset Compute Service]
-description: '[!DNL Asset Compute Service] é um serviço de processamento de ativos nativo na nuvem que reduz a complexidade e melhora a escalabilidade.'
-translation-type: tm+mt
-source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
+description: '[!DNL Asset Compute Service] é um serviço de processamento de ativos nativo em nuvem que reduz a complexidade e melhora a escalabilidade.'
+exl-id: f8c89f65-5a94-44f3-aaac-4612ae291101
+source-git-commit: a2460a0719f8c585ed72e44c904aa0df33301032
 workflow-type: tm+mt
-source-wordcount: '314'
+source-wordcount: '307'
 ht-degree: 0%
 
 ---
 
-
 # Visão geral de [!DNL Asset Compute Service] {#overview}
 
-[!DNL Asset Compute Service] é um serviço escalonável e extensível de processamento de ativos digitais.  [!DNL Adobe Experience Cloud] Ele pode transformar imagens, vídeos, documentos e outros formatos de arquivo em diferentes representações, incluindo miniaturas, texto e metadados extraídos e arquivos.
+[!DNL Asset Compute Service] O é um serviço dimensionável e extensível do  [!DNL Adobe Experience Cloud] para processar ativos digitais. Ele pode transformar imagens, vídeos, documentos e outros formatos de arquivo em diferentes representações, incluindo miniaturas, texto e metadados extraídos e arquivos.
 
-Os desenvolvedores podem plugar aplicativos de ativos personalizados (também chamados de funcionários personalizados) para resolver casos de uso personalizados. O serviço funciona no tempo de execução [!DNL Adobe I/O]. É expansível por meio de [!DNL Project Firefly] aplicativos sem cabeçalho gravados em Node.js. Elas podem realizar operações personalizadas, como chamar APIs externas para executar operações de imagem ou aproveitar o suporte [!DNL Adobe Sensei].
+Os desenvolvedores podem plugin de aplicativos de ativos personalizados (também chamados de funcionários personalizados) para tratar de casos de uso personalizados. O serviço funciona no tempo de execução [!DNL Adobe I/O]. Ele pode ser estendido por meio de [!DNL Project Firefly] aplicativos sem cabeçalho gravados em Node.js. Eles podem realizar operações personalizadas, como chamar APIs externas para executar operações de imagem ou aproveitar o suporte [!DNL Adobe Sensei].
 
-[!DNL Project Firefly] é uma estrutura para criar e implantar aplicativos da Web personalizados em  [!DNL Adobe I/O] tempo de execução para estender as soluções da Adobe Experience Cloud. Para criar aplicativos personalizados, os desenvolvedores podem aproveitar [!DNL React Spectrum] (kit de ferramentas da interface do Adobe), criar microserviços, criar eventos personalizados e orquestrar APIs. Consulte a documentação [do Project Firefly](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html).
+[!DNL Project Firefly] O é uma estrutura para criar e implantar aplicativos Web personalizados em  [!DNL Adobe I/O] tempo de execução para estender as soluções da Adobe Experience Cloud. Para criar aplicativos personalizados, os desenvolvedores podem aproveitar [!DNL React Spectrum] (kit de ferramentas da interface do usuário do Adobe), criar microsserviços, criar eventos personalizados e orquestrar APIs. Consulte a [documentação do Project Firefly](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html).
 
 >[!NOTE]
 >
->Atualmente, [!DNL Asset Compute Service] pode ser usado somente via [!DNL Experience Manager] como um [!DNL Cloud Service]. Os administradores criam perfis de processamento que podem chamar o [!DNL Asset Compute Service] para passar ativos para processamento. Consulte [usar microserviços de ativos e perfis de processamento](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
+>Atualmente, o [!DNL Asset Compute Service] pode ser usado somente via [!DNL Experience Manager] como um [!DNL Cloud Service]. Os administradores criam perfis de processamento que podem chamar o [!DNL Asset Compute Service] para transmitir ativos para processamento. Consulte [usar microsserviços de ativos e perfis de processamento](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
 
 ## Casos de uso suportados de [!DNL Asset Compute Service] {#possible-use-cases-benefits}
 
-[!DNL Asset Compute Service] apoia alguns casos comuns de utilização comercial, como o processamento básico de imagens; Conversões específicas da aplicação Adobe; e criação de aplicativos personalizados que orquestram requisitos comerciais complexos.
+[!DNL Asset Compute Service] apoia alguns casos de uso comercial comuns, como o processamento básico de imagens; Conversões específicas da aplicação Adobe; e criação de aplicativos personalizados que orquestram requisitos comerciais complexos.
 
-Você pode usar o serviço da Web [!DNL Asset Compute] para gerar miniaturas para diferentes tipos de arquivos, renderizações de imagem de alta qualidade para os [formatos de arquivo suportados](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html). Consulte [casos de uso suportados pela configuração personalizada](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
+Você pode usar o [!DNL Asset Compute] serviço da Web para gerar miniaturas para diferentes tipos de arquivos, renderizações de imagem de alta qualidade para os [formatos de arquivo compatíveis](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html). Consulte [casos de uso suportados por configuração personalizada](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
 
 >[!NOTE]
 >
->O serviço não fornece armazenamento de ativo. Os usuários fornecem e fornecem referências para locais de arquivos de origem e execução no armazenamento em nuvem.
+>O serviço não fornece armazenamento de ativos. Os usuários o fornecem e fornecem referências para locais de arquivo de origem e renderização no armazenamento na nuvem.
 
 <!-- TBD: Should this be mentioned in the docs?
 
@@ -45,10 +44,9 @@ Você pode usar o serviço da Web [!DNL Asset Compute] para gerar miniaturas par
 
 >[!MORELIKETHIS]
 >
->* [Visão geral do processamento de ativos com microserviços de ativos  [!DNL Adobe Experience Manager] em a [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html).
+>* [Visão geral do processamento de ativos com microsserviços de ativos  [!DNL Adobe Experience Manager] em a [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html).
 >* [Documentação do Project Firefly](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html).
->* [Formatos de arquivo suportados para processamento](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html).
->* [Notas de versão do serviço de Asset compute](release-notes.md)
+>* [Formatos de arquivo compatíveis com o processamento](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html).
 
 
 <!-- **TBD:**

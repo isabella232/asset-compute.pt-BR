@@ -7,10 +7,10 @@ role: Developer
 user-guide-title: Guia do serviço de asset compute
 user-guide-description: Esta documentação abrange  [!DNL Asset Compute Service] tarefas como desenvolver, gerenciar, implantar e solucionar problemas do código personalizado.
 breadcrumb-title: Guia do serviço de asset compute
-source-git-commit: c4f224a2ee99e78018a7a3f43ec59907f05ea4ef
+source-git-commit: a2460a0719f8c585ed72e44c904aa0df33301032
 workflow-type: tm+mt
-source-wordcount: '98'
-ht-degree: 12%
+source-wordcount: '96'
+ht-degree: 10%
 
 ---
 
@@ -19,7 +19,6 @@ ht-degree: 12%
 
 + [Guia do usuário do Asset compute Service](home.md)
 + [Visão geral](introduction.md)
-+ [Notas de versão](release-notes.md)
 + [Formatos de arquivo não suportados](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html)
 + [Arquitetura](architecture.md)
 + [Referências de API](api.md)
