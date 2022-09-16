@@ -2,9 +2,9 @@
 title: Entender o funcionamento de um aplicativo personalizado
 description: Trabalho interno [!DNL Asset Compute Service] aplicativo personalizado para ajudar a entender como funciona.
 exl-id: a3ee6549-9411-4839-9eff-62947d8f0e42
-source-git-commit: 07e87c57e57f18f4d6e34ca8529d5598b0b12f3d
+source-git-commit: a121b48d480b45405259c2061ac86b9ab46b89cb
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -68,7 +68,7 @@ Um exemplo de solicitação de processamento de aplicativo personalizado está a
 }
 ```
 
-O [!DNL Asset Compute Service] envia as solicitações de representação do aplicativo personalizado para o aplicativo personalizado. Ele usa um POST HTTP para o URL do aplicativo fornecido, que é o URL de ação da Web segura do Project App Builder. Todas as solicitações usam o protocolo HTTPS para maximizar a segurança de dados.
+O [!DNL Asset Compute Service] envia as solicitações de representação do aplicativo personalizado para o aplicativo personalizado. Ele usa um POST HTTP para o URL do aplicativo fornecido, que é o URL de ação da Web seguro do App Builder. Todas as solicitações usam o protocolo HTTPS para maximizar a segurança de dados.
 
 O [SDK do Asset compute](https://github.com/adobe/asset-compute-sdk#adobe-asset-compute-worker-sdk) usado por um aplicativo personalizado lida com a solicitação POST HTTP. Ele também lida com o download da fonte, o upload de renderizações, o envio [!DNL Adobe I/O] eventos e tratamento de erros.
 
