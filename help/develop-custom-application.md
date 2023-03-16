@@ -2,9 +2,9 @@
 title: Desenvolver para [!DNL Asset Compute Service]
 description: Crie aplicativos personalizados usando [!DNL Asset Compute Service].
 exl-id: a0c59752-564b-4bb6-9833-ab7c58a7f38e
-source-git-commit: a121b48d480b45405259c2061ac86b9ab46b89cb
+source-git-commit: 2dde177933477dc9ac2ff5a55af1fd2366e18359
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1618'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Certifique-se de ter a variável [[!DNL Adobe I/O] CLI](https://github.com/adobe
    $ aio app init <app-name>
    Retrieving information from [!DNL Adobe I/O] Console.
    ? Select Org My Adobe Org
-   ? Select Project MyFireflyProject
+   ? Select Project MyAdobe Developer App BuilderProject
    ? Which extension point(s) do you wish to implement ? (Press <space> to select, <a>
    to toggle all, <i> to invert selection)
    ❯◯ DX Experience Cloud SPA
@@ -100,7 +100,7 @@ Adicione as seguintes credenciais para a ferramenta de desenvolvedor ao arquivo 
 1. Baixe o arquivo no Adobe Developer Console. Vá para a raiz do projeto e clique em &quot;Baixar tudo&quot; no canto superior direito. O arquivo é baixado com `<namespace>-<workspace>.json` como o nome do arquivo. Siga uma das seguintes opções:
 
    * Renomeie o arquivo como `console.json` e mova-a para a raiz do seu projeto.
-   * Opcionalmente, é possível adicionar o caminho absoluto ao arquivo JSON de integração do Console do Adobe Developer. É o mesmo [`console.json`](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user) arquivo que é baixado no espaço de trabalho do projeto.
+   * Opcionalmente, é possível adicionar o caminho absoluto ao arquivo JSON de integração do Console do Adobe Developer. É o mesmo [`console.json`](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user) arquivo que é baixado no espaço de trabalho do projeto.
 
       ```conf
       ASSET_COMPUTE_INTEGRATION_FILE_PATH=

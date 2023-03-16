@@ -1,10 +1,10 @@
 ---
-title: Testar e depurar  [!DNL Asset Compute Service] aplicativo personalizado
-description: Teste e depure [!DNL Asset Compute Service] aplicativo personalizado.
+title: Testar e depurar [!DNL Asset Compute Service] aplicativo personalizado
+description: Testar e depurar [!DNL Asset Compute Service] aplicativo personalizado.
 exl-id: c2534904-0a07-465e-acea-3cb578d3bc08
-source-git-commit: ebc0d717b3f6fc4518f4a79cd44ebe8fdcf9ec6a
+source-git-commit: 2dde177933477dc9ac2ff5a55af1fd2366e18359
 workflow-type: tm+mt
-source-wordcount: '811'
+source-wordcount: '812'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 ## Executar testes de unidade para um aplicativo personalizado {#test-custom-worker}
 
-Instale o [Docker Desktop](https://www.docker.com/get-started) no computador. Para testar um trabalhador personalizado, execute o seguinte comando na raiz do aplicativo:
+Instalar [Desktop Docker](https://www.docker.com/get-started) na sua máquina. Para testar um trabalhador personalizado, execute o seguinte comando na raiz do aplicativo:
 
 ```bash
 $ aio app test
@@ -25,9 +25,9 @@ To run tests for a custom application, run `aio asset-compute test-worker` comma
 Document interactively running `adobe-asset-compute` commands `test-worker` and `run-worker`.
 -->
 
-Isso executa uma estrutura de teste de unidade personalizada para ações do aplicativo Asset compute no projeto, conforme descrito abaixo. Ela é conectada por meio de uma configuração no arquivo `package.json`. Também é possível ter testes de unidade JavaScript, como Jest. `aio app test` O executa ambos.
+Isso executa uma estrutura de teste de unidade personalizada para ações do aplicativo Asset compute no projeto, conforme descrito abaixo. Ele é acoplado por meio de uma configuração no `package.json` arquivo. Também é possível ter testes de unidade JavaScript, como Jest. `aio app test` O executa ambos.
 
-O plug-in [aio-cli-plugin-asset-compute](https://github.com/adobe/aio-cli-plugin-asset-compute#install-as-local-devdependency) é incorporado como dependência de desenvolvimento no aplicativo personalizado para que não precise ser instalado em sistemas de build/teste.
+O [aio-cli-plugin-asset-compute](https://github.com/adobe/aio-cli-plugin-asset-compute#install-as-local-devdependency) O plug-in é incorporado como dependência de desenvolvimento no aplicativo personalizado para que não precise ser instalado em sistemas de build/teste.
 
 ### Estrutura de teste da unidade de aplicação {#unit-test-framework}
 
@@ -35,7 +35,7 @@ A estrutura de teste da unidade de aplicativo do Asset compute permite testar ap
 
 ### Adicionar testes {#add-tests}
 
-Os testes são esperados dentro da pasta `test` no nível raiz do projeto [!DNL Adobe I/O]. Os casos de teste para cada aplicativo devem estar no caminho `test/asset-compute/<worker-name>`, com uma pasta para cada caso de teste:
+Os testes são esperados dentro da `test` no nível raiz da [!DNL Adobe I/O] projeto. Os casos de teste para cada aplicativo devem estar no caminho `test/asset-compute/<worker-name>`, com uma pasta para cada caso de teste:
 
 ```yaml
 action/
@@ -62,15 +62,15 @@ test/
             mock-console.adobe.io.json
 ```
 
-Consulte [exemplo de aplicativos personalizados](https://github.com/adobe/asset-compute-example-workers/) para obter alguns exemplos. Veja abaixo uma referência detalhada.
+Dê uma olhada em [exemplo de aplicativos personalizados](https://github.com/adobe/asset-compute-example-workers/) para obter alguns exemplos. Veja abaixo uma referência detalhada.
 
-### Testar saída {#test-output}
+### Saída de teste {#test-output}
 
-A saída de teste detalhada, incluindo os logs do aplicativo personalizado, é disponibilizada na pasta `build` na raiz do aplicativo Firefly, conforme demonstrado na saída `aio app test`.
+Os resultados detalhados do teste, incluindo os registros do aplicativo personalizado, são disponibilizados no `build` na raiz do aplicativo Adobe Developer App Builder, conforme demonstrado no `aio app test` saída.
 
-### Mover serviços externos {#mock-external-services}
+### Empilhar serviços externos {#mock-external-services}
 
-É possível fazer o mock das chamadas de serviço externo em suas ações definindo arquivos `mock-<HOST_NAME>.json` em seus casos de teste, onde HOST_NAME é o host que você deseja fazer o mock. Um exemplo de caso de uso é um aplicativo que faz uma chamada separada para S3. A nova estrutura de teste seria assim:
+É possível monitorar as chamadas de serviço externo em suas ações ao definir `mock-<HOST_NAME>.json` nos seus casos de teste, onde HOST_NAME é o host que você deseja fazer o modelo. Um exemplo de caso de uso é um aplicativo que faz uma chamada separada para S3. A nova estrutura de teste seria assim:
 
 ```json
 test/
@@ -84,7 +84,7 @@ test/
         mock-<HOST_NAME2>.json
 ```
 
-O arquivo modelo é uma resposta http formatada em JSON. Para obter mais informações, consulte [esta documentação](https://www.mock-server.com/mock_server/creating_expectations.html). Se houver vários nomes de host para modelar, defina vários arquivos `mock-<mocked-host>.json`. Abaixo está um exemplo de arquivo de amostra para `google.com` chamado `mock-google.com.json`:
+O arquivo modelo é uma resposta http formatada em JSON. Para obter mais informações, consulte [esta documentação](https://www.mock-server.com/mock_server/creating_expectations.html). Se houver vários nomes de host para modelar, defina vários `mock-<mocked-host>.json` arquivos. Abaixo está um exemplo de arquivo de modelo para `google.com` nomeado `mock-google.com.json`:
 
 ```json
 [{
@@ -101,11 +101,11 @@ O arquivo modelo é uma resposta http formatada em JSON. Para obter mais informa
 }]
 ```
 
-O exemplo `worker-animal-pictures` contém um [mock file](https://github.com/adobe/asset-compute-example-workers/blob/master/projects/worker-animal-pictures/test/asset-compute/worker-animal-pictures/simple-test/mock-upload.wikimedia.org.json) para o serviço Wikimedia com o qual ele interage.
+O exemplo `worker-animal-pictures` contém um [arquivo modelo](https://github.com/adobe/asset-compute-example-workers/blob/master/projects/worker-animal-pictures/test/asset-compute/worker-animal-pictures/simple-test/mock-upload.wikimedia.org.json) para o serviço Wikimedia, interage.
 
 #### Compartilhar arquivos em casos de teste {#share-files-across-test-cases}
 
-É recomendável usar links simbólicos relativos se você compartilhar scripts `file.*`, `params.json` ou `validate` em vários testes. Eles são compatíveis com git. Certifique-se de dar um nome exclusivo aos arquivos compartilhados, pois você pode ter arquivos diferentes. No exemplo abaixo, os testes estão misturando e correspondendo a alguns arquivos compartilhados, e seus próprios:
+É recomendável usar links simbólicos relativos se você compartilhar `file.*`, `params.json` ou `validate` scripts em vários testes. Eles são compatíveis com git. Certifique-se de dar um nome exclusivo aos arquivos compartilhados, pois você pode ter arquivos diferentes. No exemplo abaixo, os testes estão misturando e correspondendo a alguns arquivos compartilhados, e seus próprios:
 
 ```json
 tests/
@@ -135,11 +135,11 @@ tests/
 
 ### Testar erros esperados {#test-unexpected-errors}
 
-Os casos de testes de erro não devem conter um arquivo `rendition.*` esperado e devem definir o `errorReason` esperado dentro do arquivo `params.json`.
+Os casos de testes de erro não devem conter uma `rendition.*` e deve definir o `errorReason` dentro do `params.json` arquivo.
 
 >[!NOTE]
 >
->Se um caso de teste não contiver um arquivo `rendition.*` esperado e não definir o `errorReason` esperado dentro do arquivo `params.json`, presume-se que seja um caso de erro com qualquer `errorReason`.
+>Se um caso de teste não contiver um valor esperado `rendition.*` e não define o `errorReason` dentro do `params.json` é considerado um caso de erro com qualquer `errorReason`.
 
 Estrutura do caso de teste de erro:
 
@@ -158,25 +158,25 @@ Arquivo de parâmetro com motivo de erro:
 }
 ```
 
-Consulte a lista completa e a descrição dos [motivos de erro de Asset compute](https://github.com/adobe/asset-compute-commons#error-reasons).
+Consulte a lista completa e a descrição [Motivos de erro do asset compute](https://github.com/adobe/asset-compute-commons#error-reasons).
 
 ## Depurar um aplicativo personalizado {#debug-custom-worker}
 
 As etapas a seguir mostram como você pode depurar seu aplicativo personalizado usando o Código do Visual Studio. Ele permite ver registros ao vivo, pontos de interrupção de ocorrência e passar pelo código, bem como recarregar ao vivo as alterações do código local em cada ativação.
 
-Muitas dessas etapas geralmente são automatizadas por `aio` prontas para uso, consulte a seção Depuração do aplicativo na [documentação do Firefly](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html#!AdobeDocs/project-firefly/master/getting_started/first_app.md). Por enquanto, as etapas abaixo incluem uma solução alternativa.
+Muitas dessas etapas geralmente são automatizadas por `aio` para uso imediato, consulte a seção Depuração do aplicativo no [Documentação do Adobe Developer App Builder](https://developer.adobe.com/app-builder/docs/getting_started/first_app). Por enquanto, as etapas abaixo incluem uma solução alternativa.
 
-1. Instale o mais recente [wskdebug](https://github.com/apache/openwhisk-wskdebug) do GitHub e o [ngrok](https://www.npmjs.com/package/ngrok) opcional.
+1. Instale o mais recente [wskdebug](https://github.com/apache/openwhisk-wskdebug) do GitHub e do [ngrok](https://www.npmjs.com/package/ngrok).
 
    ```shell
    npm install -g @openwhisk/wskdebug
    npm install -g ngrok --unsafe-perm=true
    ```
 
-1. Adicionar ao arquivo JSON das configurações do usuário. Ele continua usando o antigo depurador de código VS, o novo tem [alguns problemas](https://github.com/apache/openwhisk-wskdebug/issues/74) com o wskdebug: `"debug.javascript.usePreview": false`.
+1. Adicionar ao arquivo JSON das configurações do usuário. Ele continua usando o antigo depurador de código VS, o novo possui [alguns problemas](https://github.com/apache/openwhisk-wskdebug/issues/74) com wskdebug: `"debug.javascript.usePreview": false`.
 1. Feche todas as instâncias de aplicativos abertas por `aio app run`.
 1. Implante o código mais recente usando `aio app deploy`.
-1. Execute somente o Asset compute Devtool usando `aio asset-compute devtool`. Mantenha aberto.
+1. Execute apenas o Asset compute Devtool usando `aio asset-compute devtool`. Mantenha aberto.
 1. No Editor de código VS, adicione a seguinte configuração de depuração ao `launch.json`:
 
    ```json
@@ -198,9 +198,9 @@ Muitas dessas etapas geralmente são automatizadas por `aio` prontas para uso, c
    }
    ```
 
-   Busque o `ACTION NAME` da saída de `aio app deploy`.
+   Busque a `ACTION NAME` da saída de `aio app deploy`.
 
-1. Selecione `wskdebug worker` na configuração de execução/depuração e pressione o ícone de reprodução. Aguarde até que ele inicie até que exiba **[!UICONTROL Pronto para ativações]** na janela **[!UICONTROL Debug Console]**.
+1. Selecionar `wskdebug worker` na configuração executar/depurar e pressione o ícone reproduzir . Aguarde até que ele inicie até que seja exibido **[!UICONTROL Pronto para ativações]** no **[!UICONTROL Console de depuração]** janela.
 
 1. Clique em **[!UICONTROL executar]** no Devtool. Você pode ver as ações executadas no editor de Código VS e os logs começam a ser exibidos.
 
