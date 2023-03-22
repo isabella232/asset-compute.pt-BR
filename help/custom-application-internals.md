@@ -2,9 +2,9 @@
 title: Entender o funcionamento de um aplicativo personalizado
 description: Trabalho interno [!DNL Asset Compute Service] aplicativo personalizado para ajudar a entender como funciona.
 exl-id: a3ee6549-9411-4839-9eff-62947d8f0e42
-source-git-commit: a121b48d480b45405259c2061ac86b9ab46b89cb
+source-git-commit: 2af710443cdc2e5e25e105eca6e779eb58631ae9
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '751'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Use a ilustração a seguir para entender o fluxo de trabalho completo quando um ativo digital for processado usando um aplicativo personalizado por um cliente.
 
-![Fluxo de trabalho do aplicativo personalizado](assets/customworker.png)
+![Fluxo de trabalho do aplicativo personalizado](assets/customworker.svg)
 
 *Figura: Etapas envolvidas para processar um ativo usando [!DNL Asset Compute Service].*
 
