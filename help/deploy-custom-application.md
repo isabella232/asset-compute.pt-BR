@@ -11,19 +11,19 @@ ht-degree: 3%
 
 # Implantar um aplicativo personalizado {#deploy-custom-application}
 
-Para implantar seu aplicativo, use [implantação do aplicativo aio](https://github.com/adobe/aio-cli#aio-appdeploy) comando. No terminal, o comando exibe um URL para acessar o aplicativo personalizado. O URL é do formato `https://[namespace].adobeio-static.net/api/v1/web/[appname]-[appversion]/[workername]`.
+Para implantar seu aplicativo, use [implantação do aplicativo aio](https://github.com/adobe/aio-cli#aio-appdeploy) comando. No terminal, o comando exibe um URL para acessar o aplicativo personalizado. A URL está no formato `https://[namespace].adobeio-static.net/api/v1/web/[appname]-[appversion]/[workername]`.
 
-Para obter o mesmo URL sem reimplantar o aplicativo, use [`aio app get-url`](https://github.com/adobe/aio-cli#aio-app-get-url-action) comando.
+Para obter o mesmo URL sem reimplantar a aplicação, use [`aio app get-url`](https://github.com/adobe/aio-cli#aio-app-get-url-action) comando.
 
-Use o URL em um [Perfil de processamento em [!DNL Experience Manager] como [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html?lang=pt-BR) para integrar seu aplicativo ao [!DNL Experience Manager] como [!DNL Cloud Service].
+Use o URL em uma [Processando perfil no [!DNL Experience Manager] as a [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html?lang=pt-BR) para integrar seu aplicativo com o [!DNL Experience Manager] as a [!DNL Cloud Service].
 
-Certifique-se de que o projeto e a área de trabalho do App Builder correspondam ao [!DNL Experience Manager] como [!DNL Cloud Service] ambiente em que deseja usar a ação. Ele tem ambientes diferentes para desenvolvimento, armazenamento temporário e produção. Você pode verificar o ambiente verificando `AIO_runtime_*` credenciais definidas dentro do arquivo ENV na raiz do aplicativo Adobe Developer App Builder. Por exemplo, para implantar em um `Stage` espaço de trabalho, a variável `AIO_runtime_namespace` é do formato `xxxxxx_xxxxxxxxx_stage`. Para integrar com [!DNL Experience Manager] como [!DNL Cloud Service] Ambiente de produção, use URLs de aplicativo do seu Adobe Developer App Builder `Production` espaço de trabalho.
+Verifique se o projeto e o espaço de trabalho do App Builder correspondem à variável [!DNL Experience Manager] as a [!DNL Cloud Service] ambiente no qual você deseja usar sua ação. Ele tem ambientes diferentes para desenvolvimento, preparo e produção. Você pode verificar o ambiente verificando `AIO_runtime_*` credenciais definidas no arquivo ENV, na raiz do aplicativo Adobe Developer App Builder. Por exemplo, para implantar em um `Stage` espaço de trabalho, o `AIO_runtime_namespace` é do formato `xxxxxx_xxxxxxxxx_stage`. Para integrar com o [!DNL Experience Manager] as a [!DNL Cloud Service] Ambiente de produção, use URLs de aplicativo do Construtor de aplicativos do Adobe Developer `Production` espaço de trabalho.
 
 >[!CAUTION]
 >
->Não use um espaço de trabalho pessoal em [!DNL Experience Manager] ambientes .
+>Não use um espaço de trabalho pessoal em [!DNL Experience Manager] ambientes.
 
 >[!MORELIKETHIS]
 >
->* [Entender e gerenciar ambientes no [!DNL Experience Manager] como [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html).
+>* [Entender e gerenciar ambientes no [!DNL Experience Manager] as a [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html).
 
