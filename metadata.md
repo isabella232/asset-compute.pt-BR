@@ -8,9 +8,10 @@ getting-started-url: https://experienceleague.adobe.com/docs/experience-manager-
 tutorials-title: Tutorials
 tutorials-url: https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html
 mini-toc-levels: 2
+feature-set: Experience Manager Assets
 git-repo: https://github.com/AdobeDocs/asset-compute.pt-BR
 index: y
-source-git-commit: 5f987f28fdf8d074ceb6226d21a5f64aad67bf04
+source-git-commit: 66bad4afdc7b08e1e91418ec320b061e47c3683d
 workflow-type: tm+mt
 source-wordcount: '130'
 ht-degree: 89%
